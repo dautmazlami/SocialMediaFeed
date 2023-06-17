@@ -25,7 +25,7 @@ body.dark-mode .layout-container {
 /* Header styles */
 .header-container {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   padding: 20px;
 }
 
@@ -115,10 +115,26 @@ input:checked + .slider:before {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+.post-card .profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 10px 10px;
+  display: inline-block;
+}
+
 .post-card img {
+  margin-top: 10px;
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+.post-card .user-name {
+  margin-left: 10px;
+  font-family: 'Poppins' sans-serif;
+  font-weight: 600;
 }
 
 .post-card .card-content {
@@ -127,9 +143,10 @@ input:checked + .slider:before {
 }
 
 .post-card .card-content h4 {
-  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
   margin-bottom: 10px;
-  font-weight: bold;
 }
 
 .post-card .card-content p {
@@ -152,6 +169,7 @@ input:checked + .slider:before {
 }
 
 .post-card .card-content .user-info .user-name {
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: bold;
 }
