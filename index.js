@@ -1,6 +1,5 @@
-// index.js
-
 // Fetch the JSON data from the local file
+
 fetch("data.json")
   .then(function(response) {
     if (!response.ok) {
@@ -55,13 +54,13 @@ fetch("data.json")
     console.error(error.message);
   });
 
-// Function to render the social media feed
+// render the social media feed
 function renderSocialMediaFeed(data) {
   const feedContainer = document.querySelector('.layout-container');
   let renderedPosts = 0;
   const postsPerPage = 4;
 
-  // Function to create a post card element
+  // create a post card element
   function createPostCard(post) {
     const card = document.createElement('div');
     card.classList.add('post-card');
@@ -91,11 +90,10 @@ function renderSocialMediaFeed(data) {
     return card;
   }
 
-  // Function to render a batch of posts
+  // render a batch of posts
   function renderPosts(startIndex, endIndex) {
     for (let i = startIndex; i < endIndex; i++) {
       if (i >= data.length) {
-        // Hide the "Load More" button if all posts have been loaded
         loadMoreBtn.style.display = 'none';
         break;
       }
@@ -109,7 +107,9 @@ function renderSocialMediaFeed(data) {
   // Render the initial batch of posts
   renderPosts(0, postsPerPage);
 
-  document.addEventListener('DOMContentLoaded', function () {
+
+// switch between dark and light theme
+  document.addEventListener('click', function () {
     const themeSwitch = document.getElementById('themeSwitch');
     const body = document.body;
   
